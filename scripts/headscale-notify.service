@@ -1,0 +1,15 @@
+[Unit]
+Description=Headscale registration notifier (ntfy)
+After=docker.service
+Requires=docker.service
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/headscale-notify.sh
+Restart=always
+RestartSec=10
+Environment=NTFY_TOPIC=tailfront-al-andal
+Environment=HEADSCALE_CONTAINER=headscale
+
+[Install]
+WantedBy=multi-user.target

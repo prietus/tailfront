@@ -1,0 +1,13 @@
+[Unit]
+Description=Tailfront pending-nodes API
+After=docker.service nginx.service
+Requires=docker.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /usr/local/bin/pending-nodes.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,22 @@
+# macOS
+.DS_Store
+
+# Xcode
+build/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+*.xcworkspace/xcuserdata/
+
+# xcodegen-generated — project.yml is the source of truth
+Tailfront.xcodeproj/
+
+# Swift / SwiftPM
+.build/
+.swiftpm/
+Packages/
+Package.resolved
+
+# Claude
+.claude/
